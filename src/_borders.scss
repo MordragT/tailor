@@ -1,0 +1,33 @@
+$_sizes: (
+    sm: 0.125rem,
+    md: 0.375rem,
+    lg: 0.5rem,
+    xl: 0.75rem,
+    full: 9999px
+);
+
+$_normal: 0.25rem;
+
+.rounded {
+    border-radius: $_normal;
+}
+
+@each $name,
+$size in $_sizes {
+    .rounded-#{$name} {
+        border-radius: $size;
+    }
+}
+
+.rounded-t {
+    border-top-left-radius: $_normal;
+    border-top-right-radius: $_normal;
+}
+
+@each $name,
+$size in $_sizes {
+    .rounded-t-#{$name} {
+        border-top-left-radius: $size;
+        border-top-right-radius: $size;
+    }
+}

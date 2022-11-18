@@ -1,0 +1,48 @@
+$red: #ef4444 !default;
+$orange: #f97316 !default;
+$yellow: #eab308 !default;
+$green: #22c55e !default;
+$teal: #14b8a6 !default;
+$cyan: #06b6d4 !default;
+$blue: #3b82f6 !default;
+$purple: #a855f7 !default;
+$pink: #ec4899 !default;
+$gray: #9ca3af !default;
+$dark-gray: #1f2937 !default;
+$white: white !default;
+$black: black !default;
+
+// $colors: (
+//     red: $red,
+//     orange: $orange,
+//     yellow: $yellow,
+//     green: $green,
+//     teal: $teal,
+//     cyan: $cyan,
+//     blue: $blue,
+//     purple: $purple,
+//     pink: $pink,
+//     gray: $gray,
+// );
+
+// @function color($color, $tone: 500) {
+//     $color: map-get($colors, '#{$color}');
+
+//     @if $tone <=500 {
+//         $percentage: 100 - ($tone / 5);
+//         @return tint($color, $percentage);
+//     }
+
+//     @else {
+//         $percentage: 100 - (($tone - 500) / 5);
+//         @return shade($color, $percentage);
+//     }
+// }
+
+// @function tint($color, $percentage) {
+//     @return mix($white, $color, $percentage);
+// }
+
+// @function shade($color, $percentage) {
+//     @return mix($black, $color, $percentage);
+// }

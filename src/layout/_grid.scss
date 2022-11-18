@@ -1,0 +1,50 @@
+$_columns: 12;
+
+
+.container {
+    @include max-w-screen-lg;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: repeat($_columns, 1fr);
+    grid-auto-rows: auto;
+    column-gap: .5em;
+
+    @media only screen and (min-width: $w-screen-md) {
+        width: 80%;
+    }
+}
+
+.row {
+    grid-column: span $_columns;
+}
+
+@for $i from 1 through $_columns {
+    .col-#{$i} {
+        grid-column: span $i;
+    }
+}
+
+// use grid-cols and justify together inside flex
+
+@for $i from 1 through $_columns {
+    .grid-cols-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+    }
+}
+
+.justify-items-start {
+    justify-items: start;
+}
+
+.justify-items-end {
+    justify-items: end;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+.justify-items-stretch {
+    justify-items: stretch;
+}

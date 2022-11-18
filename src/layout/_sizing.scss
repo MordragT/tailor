@@ -1,0 +1,54 @@
+@mixin max-w-screen-sm {
+    max-width: $w-screen-sm;
+}
+
+@mixin max-w-screen-md {
+    max-width: $w-screen-md;
+}
+
+@mixin max-w-screen-lg {
+    max-width: $w-screen-lg;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.object-fill {
+    object-fit: fill;
+}
+
+.object-none {
+    object-fit: none;
+}
+
+.object-scale-down {
+    object-fit: scale-down;
+}
+
+.min-w-min {
+    min-width: min-content;
+}
+
+.min-w-max {
+    min-width: max-content;
+}
+
+$_size: 0.25rem;
+
+@for $i from 1 through 96 {
+
+    .w-#{$i} {
+        width: $_size;
+    }
+
+    .h-#{$i} {
+        height: $_size;
+    }
+
+    $_size: $_size + 0.25rem;
+}
